@@ -1,0 +1,168 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: 'lora' sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header styling */
+header{
+    background-color: rgb(226, 205, 226);
+    color: #000000;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;/* Items are spaced out with equal space between each one */
+    align-items: center; /* Vertically centers the items in the container */
+}
+.logo{
+    display: flex;
+    flex-direction: column;/* Stack items vertically */
+}
+
+.logo img{
+    width: 50px;
+    align-self: center;/* Center logo icon vertically */
+}
+ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+a{
+    color: #000;
+    text-decoration: none;
+    font-size: 22px;
+}
+
+/* Style for link when hovered */
+a:hover{
+    color: #812a62;
+    text-decoration: underline;
+}
+
+
+/* Hero Section */
+.hero{
+    background-color: #f8d7da;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.hero h2{
+    font-size: 50px;
+}
+
+.hero p{
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+
+/* Product Section */
+.products {
+    padding: 40px 0px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.products h2{
+    font-size: 35px;
+}
+
+.product-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;/* Allows items to wrap onto the next line if necessary */
+    gap: 20px;
+}
+.product-card {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.108);
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;/* Adds smooth transition for transform and box-shadow */
+}
+
+
+.product-card img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+/* Scales up the product card and adds a shadow on hover */
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h3,p{
+    margin-bottom: 15px;
+}
+
+button{
+    background-color: #dfa3a8;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 19px;
+    text-transform: uppercase;
+}
+
+button:hover{
+    background-color: #812a62;
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(226, 205, 226);
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.contact-info {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.social-media{
+    display: flex; 
+    justify-content: center;
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+    .product-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-card {
+        width: 90%; /* Make product cards narrower on small screens */
+        max-width: none; /* Remove max-width */
+    }
+
+    .hero h2 {
+        font-size: 35px; /* Adjust font size on smaller screens */
+    }
+
+    .hero p {
+        font-size: 16px; /* Adjust font size on smaller screens */
+    }
+
+    ul {
+        flex-direction: column; /* Stack navigation items vertically on small screens */
+        align-items: center;
+    }
+
+    li {
+        margin-bottom: 10px; /* Space out navigation links */
+    }
+}
